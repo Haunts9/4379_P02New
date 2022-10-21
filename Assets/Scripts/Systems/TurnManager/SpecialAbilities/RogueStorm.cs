@@ -12,7 +12,7 @@ public class RogueStorm : MonoBehaviour
     BaseCharacterObject temp;
     private void Start()
     {
-        //BaseCharacterObject temp = Instantiate(SceneData.instanceRef.CurrentTurnAccessor);
+        //temp = Instantiate(SceneData.instanceRef.CurrentTurnAccessor);
         //Increase number of daggers
         thrownCount = SceneData.instanceRef.CurrentTurnAccessor.attackAmount;
         speed = SceneData.instanceRef.CurrentTurnAccessor.beatModifier;
