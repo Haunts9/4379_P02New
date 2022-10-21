@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3b07fc7c055404bbf35195c7f85323, type: 3}
+  m_Name: Rogue
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  characterName: Diamanda
+  doll: {fileID: 0}
+  icon: {fileID: 4267552636779454803, guid: 8f0af99d5d9eb694b97ced4b868d9b77, type: 3}
+  specialAbility: {fileID: 8040864443900734518, guid: 59d24fbefa6a94244aed4fc41613c86f, type: 3}
+  specialAbilityName: Dagger Storm
+  specialCooldown: 4
+  currentCooldown: 2
+  attackAmount: 3
+  beatModifier: 0.5
+  beatZoneSlow: 0.1
+  MaxHP: 50
+  CurrentHP: 50
+  Speed: 5
+  Attack: 2
+  Defense: 3
+  isDefending: 1
+  selectedTarget: {fileID: 11400000, guid: ca1f30b501e0c344fa25f13dd60ca978, type: 2}
+  TurnPosition: 0
