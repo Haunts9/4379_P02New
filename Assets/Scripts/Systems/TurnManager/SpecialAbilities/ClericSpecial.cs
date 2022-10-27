@@ -7,12 +7,13 @@ public class ClericSpecial : MonoBehaviour
     float FinalTime;
     int count;
     [SerializeField] GameObject specialBlip;
+    BaseCharacterObject tempChar;
     int temp; 
     private void Start()
     {
         //Increase attack to heal more
+        tempChar = Instantiate(SceneData.instanceRef.CurrentTurnAccessor);
         SceneData.instanceRef.CurrentTurnAccessor.Attack += SceneData.instanceRef.CurrentTurnAccessor.Attack;
-        temp = SceneData.instanceRef.CurrentTurnAccessor.Attack;
         //Activate the thing
         SpecialTrigger();
     }
@@ -48,7 +49,8 @@ public class ClericSpecial : MonoBehaviour
             SceneData.instanceRef.SetBusy = false;
             SceneData.instanceRef.ToggleBeatZone(false);
             //reset
-            SceneData.instanceRef.CurrentTurnAccessor.Attack = temp;
+            SceneData.instanceRef.CurrentTurnAccessor.Attack = tempChar.Attack;
+            Destroy(tempChar);
             Destroy(gameObject);
         }
     }

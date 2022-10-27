@@ -5,7 +5,11 @@ using UnityEngine;
 public class SceneData : MonoBehaviour
 {
     public static SceneData instanceRef;
-
+    [Header("Level Variables")]
+    [SerializeField] public BaseLevelObject CurrentLevel;
+    public BaseBattleObject CurrentBattle;
+    public BaseEncounterObject CurrentEncounter;
+    public int CurrentEvent = -1;
     #region BeatZone
     [Header("Beat Zone Variables")]
     private bool BUSY;
@@ -14,16 +18,19 @@ public class SceneData : MonoBehaviour
     [SerializeField] private BaseCharacterObject CurrentTurn;
     [SerializeField] BaseBeatObject BeatTemplate;
     public float blipSpeed = 7f;
+    public float walkSpeed;
     #endregion
     #region KnownSceneObjects
     [Header("InScene Variables")]
     [SerializeField] public GameObject BlipSpawner;
     [SerializeField] public GameObject AttackBlip;
     [SerializeField] public GameObject DefenseBlip;
+    [SerializeField] public GameObject TravelManager;
     [SerializeField] public GameObject TurnManager;
     [Header("Panorama Variables")]
-    [SerializeField] public GameObject NextEventPanorama;
-    [SerializeField] public GameObject[] EnemyDollSpawnLocations;
+    [SerializeField] public GameObject CurrentPanorama;
+    public Transform[] EnemyDollSpawnLocations;
+    public Transform EncounterSpawnLocation;
     #endregion
     #region PlayerData
     [Header("Player Data")]

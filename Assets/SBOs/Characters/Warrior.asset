@@ -15,7 +15,7 @@ MonoBehaviour:
   isPlayer: 1
   characterName: Hart
   doll: {fileID: 6028005283419217487, guid: bc930ef66c6af134f868d6376e700511, type: 3}
-  dollSpawn: {fileID: 3921309824205006867, guid: da33893b38245954ea0f09c585c7ed36, type: 3}
+  dollSpawn: {fileID: 3921309824205006866, guid: da33893b38245954ea0f09c585c7ed36, type: 3}
   icon: {fileID: 7852384302842541476, guid: 8087198c4b198e248b019ffe53e8d46c, type: 3}
   specialAbility: {fileID: 5183762032145505272, guid: aed12342f7ac0d8448a3c7f00369f4db, type: 3}
   specialAbilityName: Taunt

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805baaedfa1263a4aa83a613926341b3, type: 3}
   m_Name: TestEncounter
   m_EditorClassIdentifier: 
-  encounterName: 
-  encounterDescription: 
+  encounterName: Crates
+  encounterDescription: You find some crates, but nothing else is really interesting
+    about them...

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class TESTBOYSCRIPT : MonoBehaviour
 {
-    TurnManager test;
+    TravelManager test;
 
     void Start()
     {
-        test = SceneData.instanceRef.TurnManager.GetComponent<TurnManager>();
-        test.InitializeTurnOrder();
+        test = SceneData.instanceRef.TravelManager.GetComponent<TravelManager>();
+        test.InitializeNextEvent();
     }
 
 }

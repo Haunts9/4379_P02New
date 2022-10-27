@@ -38,6 +38,7 @@ public class TurnManager : MonoBehaviour
     }
     public void InitializeTurnOrder()
     {
+        Battle = SceneData.instanceRef.CurrentBattle;
         //Init List
         enemyDollSpawn = 0;
         curEnemies = 0;
@@ -65,7 +66,7 @@ public class TurnManager : MonoBehaviour
         //Initialize Enemy AI
         EnemyChoice = gameObject.GetComponent<EnemyAI>();
         //End AI Init
-        FirstTurn();
+        StartCoroutine(WaitBeforeCombatStarts());
     }
     void FirstTurn()
     {
@@ -289,6 +290,7 @@ public class TurnManager : MonoBehaviour
             midTurn = false;
             combat = false;
             CleanUp();
+            SceneData.instanceRef.TravelManager.GetComponent<TravelManager>().InitializeNextEvent();
         }
         else
         {
@@ -317,6 +319,12 @@ public class TurnManager : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         midTurn = false;
     }
+    IEnumerator WaitBeforeCombatStarts()
+    {
+        PlayerField.SetActive(false);
+        yield return new WaitForSeconds(SceneData.instanceRef.walkSpeed);
+        FirstTurn();
+    }
     IEnumerator EndTurn()
     {
         if (combat == true)
@@ -336,6 +344,7 @@ public class TurnManager : MonoBehaviour
     }
     void CleanUp()
     {
+        PlayerField.SetActive(false);
         foreach (BaseCharacterObject turn in TurnOrder)
         {
             if (turn.isPlayer == false)
@@ -343,6 +352,9 @@ public class TurnManager : MonoBehaviour
                 Destroy(turn);
             }
         }
+        AmountOfTurns = 0;
+        CurrentTurn = 0;
+        TurnOrder.Clear();
     }
     #endregion
 }

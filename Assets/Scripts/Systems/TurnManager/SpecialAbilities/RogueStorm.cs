@@ -6,16 +6,13 @@ public class RogueStorm : MonoBehaviour
 {
     float FinalTime;
     int count;
-    int thrownCount;
-    float speed;
     [SerializeField] GameObject specialBlip;
-    BaseCharacterObject temp;
+    BaseCharacterObject tempChar;
     private void Start()
     {
         //temp = Instantiate(SceneData.instanceRef.CurrentTurnAccessor);
         //Increase number of daggers
-        thrownCount = SceneData.instanceRef.CurrentTurnAccessor.attackAmount;
-        speed = SceneData.instanceRef.CurrentTurnAccessor.beatModifier;
+        tempChar = Instantiate(SceneData.instanceRef.CurrentTurnAccessor);
         SceneData.instanceRef.CurrentTurnAccessor.attackAmount = 10;
         SceneData.instanceRef.CurrentTurnAccessor.beatModifier = .25f;
         //Activate the thing
@@ -53,8 +50,9 @@ public class RogueStorm : MonoBehaviour
             SceneData.instanceRef.SetBusy = false;
             SceneData.instanceRef.ToggleBeatZone(false);
             //reset
-            SceneData.instanceRef.CurrentTurnAccessor.attackAmount = thrownCount;
-            SceneData.instanceRef.CurrentTurnAccessor.beatModifier = speed;
+            SceneData.instanceRef.CurrentTurnAccessor.attackAmount = tempChar.attackAmount;
+            SceneData.instanceRef.CurrentTurnAccessor.beatModifier = tempChar.beatModifier;
+            Destroy(tempChar);
             Destroy(gameObject);
         }
     }
