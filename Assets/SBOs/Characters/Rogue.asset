@@ -14,20 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 1
   characterName: Diamanda
-  doll: {fileID: 0}
+  doll: {fileID: 238657988638483875, guid: 6aaa1091127e4364f86ae2f6b7ad992d, type: 3}
+  dollSpawn: {fileID: 7627490251718639392, guid: 4990452015476cc4db34c6cb9016edbb, type: 3}
   icon: {fileID: 4267552636779454803, guid: 8f0af99d5d9eb694b97ced4b868d9b77, type: 3}
   specialAbility: {fileID: 8040864443900734518, guid: 59d24fbefa6a94244aed4fc41613c86f, type: 3}
   specialAbilityName: Dagger Storm
   specialCooldown: 4
-  currentCooldown: 2
+  currentCooldown: 0
   attackAmount: 3
   beatModifier: 0.5
   beatZoneSlow: 0.1
   MaxHP: 50
-  CurrentHP: 50
+  CurrentHP: 34
   Speed: 5
-  Attack: 2
+  Attack: 7
   Defense: 3
-  isDefending: 1
-  selectedTarget: {fileID: 11400000, guid: ca1f30b501e0c344fa25f13dd60ca978, type: 2}
+  ActionRange: 
+  isDefending: 0
+  selectedTarget: {fileID: 11400000, guid: 0e8e7f9e0e167874a8ffe00d98cd9da4, type: 2}
   TurnPosition: 0

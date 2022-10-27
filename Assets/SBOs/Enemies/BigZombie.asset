@@ -10,20 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b3b07fc7c055404bbf35195c7f85323, type: 3}
-  m_Name: TestEnemy2
+  m_Name: BigZombie
   m_EditorClassIdentifier: 
   isPlayer: 0
-  characterName: Bob
-  doll: {fileID: 0}
+  characterName: Zombie
+  doll: {fileID: 821177826842922232, guid: ca261675a73915b469c8690ede0875a5, type: 3}
+  dollSpawn: {fileID: 0}
   icon: {fileID: 5221868291555309408, guid: e97e1aaa74dd7944ea9430fe52f55b64, type: 3}
-  attackAmount: 1
+  specialAbility: {fileID: 0}
+  specialAbilityName: 
+  specialCooldown: 0
+  currentCooldown: 0
+  attackAmount: 3
   beatModifier: 1
   beatZoneSlow: 0.1
-  MaxHP: 20
-  CurrentHP: 20
-  Speed: 1
-  Attack: 1
-  Defense: 1
+  MaxHP: 100
+  CurrentHP: 100
+  Speed: 2
+  Attack: 15
+  Defense: 7
+  ActionRange: 3c00000050000000
   isDefending: 0
-  selectedTarget: {fileID: 0}
-  TurnPosition: 5
+  selectedTarget: {fileID: 11400000, guid: c9ed336bd13c43d459a01ea86a41514e, type: 2}
+  TurnPosition: 2

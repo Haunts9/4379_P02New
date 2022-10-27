@@ -8,6 +8,8 @@ TagManager:
   - BlipDeathZone
   - Icon
   - SpecialButtonText
+  - EnemySpawn
+  - ExploreSpawn
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - UX
+  - InScene
   - 
   - 
   - 

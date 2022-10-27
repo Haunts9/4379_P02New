@@ -8,9 +8,15 @@ public class HPBar : MonoBehaviour
     float scale;
     void FixedUpdate()
     {
+        if (character  != null)
+        {
+            scale = (float)character.CurrentHP / (float)character.MaxHP;
+            gameObject.transform.localScale = new Vector3(scale, 1, 1);
+        }
 
-        scale = (float)character.CurrentHP / (float)character.MaxHP;
-        gameObject.transform.localScale = new Vector3(scale, 1, 1);
-
+    }
+    public void SetTarget(BaseCharacterObject target)
+    {
+        character = target;
     }
 }

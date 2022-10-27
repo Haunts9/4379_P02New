@@ -14,20 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 1
   characterName: Clover
-  doll: {fileID: 0}
+  doll: {fileID: 3211706348506361701, guid: 9162d1f3c4ae5644a8d42f290fcece71, type: 3}
+  dollSpawn: {fileID: 4639919730195122628, guid: deb151fb93222fb499ff1d8db4708b80, type: 3}
   icon: {fileID: 7829537730557149100, guid: a014acf6d73723b4ba2d283e1aff78f2, type: 3}
   specialAbility: {fileID: 5183762032145505272, guid: aed12342f7ac0d8448a3c7f00369f4db, type: 3}
   specialAbilityName: Heal
   specialCooldown: 3
-  currentCooldown: 3
+  currentCooldown: 1
   attackAmount: 3
   beatModifier: 1
   beatZoneSlow: 0.1
   MaxHP: 75
-  CurrentHP: 71
+  CurrentHP: 45
   Speed: 3
   Attack: 6
   Defense: 3
+  ActionRange: 
   isDefending: 0
-  selectedTarget: {fileID: 11400000, guid: 318fc2b17884cc14c9573d5268a9be8b, type: 2}
-  TurnPosition: 2
+  selectedTarget: {fileID: 11400000, guid: ca1f30b501e0c344fa25f13dd60ca978, type: 2}
+  TurnPosition: 4

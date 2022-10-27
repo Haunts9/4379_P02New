@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92ed7261ada515a40a5c4274f8ed11f7, type: 3}
-  m_Name: TestBattle
+  m_Name: Zombies1
   m_EditorClassIdentifier: 
   Enemies:
   - {fileID: 11400000, guid: ca1f30b501e0c344fa25f13dd60ca978, type: 2}
-  - {fileID: 11400000, guid: 0e8e7f9e0e167874a8ffe00d98cd9da4, type: 2}
+  - {fileID: 11400000, guid: ca1f30b501e0c344fa25f13dd60ca978, type: 2}

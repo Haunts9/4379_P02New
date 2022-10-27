@@ -7,11 +7,12 @@ public class ClericSpecial : MonoBehaviour
     float FinalTime;
     int count;
     [SerializeField] GameObject specialBlip;
-    int temp = SceneData.instanceRef.CurrentTurnAccessor.Attack;
+    int temp; 
     private void Start()
     {
         //Increase attack to heal more
         SceneData.instanceRef.CurrentTurnAccessor.Attack += SceneData.instanceRef.CurrentTurnAccessor.Attack;
+        temp = SceneData.instanceRef.CurrentTurnAccessor.Attack;
         //Activate the thing
         SpecialTrigger();
     }

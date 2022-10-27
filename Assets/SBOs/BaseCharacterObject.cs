@@ -8,6 +8,7 @@ public class BaseCharacterObject : ScriptableObject
     [SerializeField] public bool isPlayer = false;
     [SerializeField] public string characterName;
     [SerializeField] public GameObject doll;
+    [SerializeField] public GameObject dollSpawn;
     [SerializeField] public GameObject icon;
     [Header("Special")]
     [SerializeField] public GameObject specialAbility;
@@ -23,6 +24,8 @@ public class BaseCharacterObject : ScriptableObject
     [SerializeField] public int Speed;
     [SerializeField] public int Attack;
     [SerializeField] public int Defense;
+    [Header("Enemy Only Stuff")]
+    [SerializeField] public int[] ActionRange;
     [Header("Script Modifiers")]
     public bool isDefending = false;
     public BaseCharacterObject selectedTarget;

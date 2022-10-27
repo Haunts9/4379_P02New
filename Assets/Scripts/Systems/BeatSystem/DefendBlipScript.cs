@@ -35,6 +35,7 @@ public class DefendBlipScript : BlipScript
         {
             target.CurrentHP = 0;
         }
+        Debug.Log(target.characterName + "'s HP is now" + target.CurrentHP);
     }
     protected override void Hit()
     {
@@ -58,6 +59,6 @@ public class DefendBlipScript : BlipScript
         {
             target.CurrentHP = 0;
         }
-
+        Debug.Log(target.characterName + "'s HP is now" + target.CurrentHP);
     }
 }

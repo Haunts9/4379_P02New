@@ -21,6 +21,9 @@ public class SceneData : MonoBehaviour
     [SerializeField] public GameObject AttackBlip;
     [SerializeField] public GameObject DefenseBlip;
     [SerializeField] public GameObject TurnManager;
+    [Header("Panorama Variables")]
+    [SerializeField] public GameObject NextEventPanorama;
+    [SerializeField] public GameObject[] EnemyDollSpawnLocations;
     #endregion
     #region PlayerData
     [Header("Player Data")]

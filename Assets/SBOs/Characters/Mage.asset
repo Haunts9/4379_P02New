@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 1
   characterName: Spayd
-  doll: {fileID: 0}
+  doll: {fileID: 593524143504528515, guid: 4d4b4cb3a3657804fb1c80e67225ce85, type: 3}
+  dollSpawn: {fileID: 1695566965704495844, guid: cef7385b522ff5549b7519db641ee6df, type: 3}
   icon: {fileID: 5332531375004863457, guid: 5c1a9203a011f204db105aafc88ea35c, type: 3}
   specialAbility: {fileID: 5183762032145505272, guid: aed12342f7ac0d8448a3c7f00369f4db, type: 3}
   specialAbilityName: FireBall
@@ -24,10 +25,11 @@ MonoBehaviour:
   beatModifier: 1.5
   beatZoneSlow: 0.1
   MaxHP: 50
-  CurrentHP: 0
+  CurrentHP: 50
   Speed: 4
-  Attack: 5
+  Attack: 12
   Defense: 2
+  ActionRange: 
   isDefending: 0
-  selectedTarget: {fileID: 11400000, guid: ca1f30b501e0c344fa25f13dd60ca978, type: 2}
+  selectedTarget: {fileID: 11400000, guid: 0e8e7f9e0e167874a8ffe00d98cd9da4, type: 2}
   TurnPosition: 1
