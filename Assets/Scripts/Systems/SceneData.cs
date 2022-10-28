@@ -6,6 +6,7 @@ public class SceneData : MonoBehaviour
 {
     public static SceneData instanceRef;
     [Header("Level Variables")]
+    [SerializeField] public BaseLevelObject[] AllLevels;
     [SerializeField] public BaseLevelObject CurrentLevel;
     public BaseBattleObject CurrentBattle;
     public BaseEncounterObject CurrentEncounter;
@@ -15,11 +16,14 @@ public class SceneData : MonoBehaviour
     private bool BUSY;
     [SerializeField]  private bool BeatZoneUsable;
     private bool BeatZoneActive;
-    [SerializeField] private BaseCharacterObject CurrentTurn;
+
     [SerializeField] BaseBeatObject BeatTemplate;
     public float blipSpeed = 7f;
     public float walkSpeed;
     #endregion
+    [Header("Combat Variables")]
+    [SerializeField] private BaseCharacterObject CurrentTurn;
+    public List<BaseCharacterObject> TurnOrder = new List<BaseCharacterObject>();
     #region KnownSceneObjects
     [Header("InScene Variables")]
     [SerializeField] public GameObject BlipSpawner;
@@ -35,6 +39,7 @@ public class SceneData : MonoBehaviour
     #region PlayerData
     [Header("Player Data")]
     [SerializeField] public BaseCharacterObject[] CharactersInParty;
+    public bool isTaunting = false;
     #endregion
     public bool SetBusy
     {

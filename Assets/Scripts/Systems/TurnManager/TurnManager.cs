@@ -29,7 +29,7 @@ public class TurnManager : MonoBehaviour
     int curEnemies;
     #endregion
     //Read from party and battle lists to create turn order and rotate
-    private void FixedUpdate()
+    private void Update()
     {
         if (combat == true)
         {
@@ -66,6 +66,7 @@ public class TurnManager : MonoBehaviour
         //Initialize Enemy AI
         EnemyChoice = gameObject.GetComponent<EnemyAI>();
         //End AI Init
+        SceneData.instanceRef.TurnOrder = TurnOrder;
         StartCoroutine(WaitBeforeCombatStarts());
     }
     void FirstTurn()
@@ -225,12 +226,7 @@ public class TurnManager : MonoBehaviour
         if (SceneData.instanceRef.CurrentTurnAccessor.CurrentHP > 0)
         {
             SetIcon();
-            int choice = Random.Range(0, TurnOrder.Count);
-            while (TurnOrder[choice].isPlayer == false)
-            {
-                choice = Random.Range(0, TurnOrder.Count);
-            }
-            SceneData.instanceRef.CurrentTurnAccessor.selectedTarget = TurnOrder[choice];
+            EnemyTargeting();
             EnemyChoice.Initialize();        
             StartCoroutine(WaitABitBeforeTurn());
             StartCoroutine(EndTurn());
@@ -239,6 +235,22 @@ public class TurnManager : MonoBehaviour
         {
             midTurn = false;
             StartCoroutine(EndTurn());
+        }
+    }
+    private void EnemyTargeting()
+    {
+        if (SceneData.instanceRef.isTaunting == true)
+        {
+            SceneData.instanceRef.CurrentTurnAccessor.selectedTarget = TurnOrder.Find(x => x.specialAbilityName == "Taunt");
+        }
+        else
+        {
+            int choice = Random.Range(0, TurnOrder.Count);
+            while (TurnOrder[choice].isPlayer == false)
+            {
+                choice = Random.Range(0, TurnOrder.Count);
+            }
+            SceneData.instanceRef.CurrentTurnAccessor.selectedTarget = TurnOrder[choice];
         }
     }
     private void InitializeEnemy(BaseCharacterObject enemy)

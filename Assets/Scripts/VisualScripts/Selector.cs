@@ -15,7 +15,7 @@ public class Selector : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (SelectorGraphic != null && myTarget != null)
+        if (SceneData.instanceRef.CurrentTurnAccessor != null && SelectorGraphic != null && myTarget != null)
         {
             if (SceneData.instanceRef.CurrentTurnAccessor.selectedTarget == myTarget)
             {
