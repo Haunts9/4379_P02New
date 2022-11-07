@@ -9,6 +9,10 @@ public class DefendBlipScript : BlipScript
     int damage;
     private void Start()
     {
+
+    }
+    private void Target()
+    {
         target = SceneData.instanceRef.CurrentTurnAccessor.selectedTarget;
         //calculate damage
         if (target.isDefending == true)
@@ -25,20 +29,22 @@ public class DefendBlipScript : BlipScript
             damage = 1;
         }
         //calculate damage end
-
     }
     protected override void Miss()
     {
+        Target();
         Debug.Log("Do Player Miss");
         target.CurrentHP -= damage;
         if (target.CurrentHP < 0)
         {
             target.CurrentHP = 0;
+            SceneData.instanceRef.CurrentTurnAccessor.selectedTarget = SceneData.instanceRef.TurnOrder.Find(x => x.isPlayer == true && x.CurrentHP > 0);
         }
         Debug.Log(target.characterName + "'s HP is now" + target.CurrentHP);
     }
     protected override void Hit()
     {
+        Target();
         //defense to reduce damage
         Debug.Log("Do Player Hit");
         if (target.isDefending == true)
@@ -58,6 +64,8 @@ public class DefendBlipScript : BlipScript
         if (target.CurrentHP < 0)
         {
             target.CurrentHP = 0;
+            if (SceneData.instanceRef.TurnOrder.Find(x => x.isPlayer == true && x.CurrentHP > 0) != null)
+                SceneData.instanceRef.CurrentTurnAccessor.selectedTarget = SceneData.instanceRef.TurnOrder.Find(x => x.isPlayer == true && x.CurrentHP > 0);
         }
         Debug.Log(target.characterName + "'s HP is now" + target.CurrentHP);
     }

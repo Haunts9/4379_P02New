@@ -11,7 +11,7 @@ public class TravelManager : MonoBehaviour
     BaseLevelObject Level;
     public void Start()
     {
-        SceneData.instanceRef.CurrentEvent = -1;
+        SceneData.instanceRef.CurrentEvent = 0;
         SceneData.instanceRef.walkSpeed = walkSpeed;
     }
 
@@ -23,7 +23,7 @@ public class TravelManager : MonoBehaviour
         createPanorama();
         StartCoroutine(walkSpeed.Tweeng((p) => OldPanorama.transform.position = p, OldPanorama.transform.position, PanDelete.position));
         StartCoroutine(walkSpeed.Tweeng((p) => SceneData.instanceRef.CurrentPanorama.transform.position = p, SceneData.instanceRef.CurrentPanorama.transform.position, new Vector3(0,0,0)));
-        doEvent();
+        StartCoroutine(waitTillNextEvent());
     }
     #region doBackground
     void createPanorama()
@@ -40,6 +40,11 @@ public class TravelManager : MonoBehaviour
 
     }
     #endregion
+    IEnumerator waitTillNextEvent()
+    {
+        yield return new WaitForSeconds(.1f);
+        doEvent();
+    }
     void doEvent()
     {
         switch(Level.floorplan[SceneData.instanceRef.CurrentEvent])
@@ -77,8 +82,13 @@ public class TravelManager : MonoBehaviour
     }
     void doEncounter()
     {
+
         int choice = Random.Range(0, Level.possibleEncounters.Length);
         SceneData.instanceRef.CurrentEncounter = SceneData.instanceRef.CurrentLevel.possibleEncounters[choice];
+        Debug.Log(SceneData.instanceRef.CurrentEncounter + " initialized.");
+        SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().enabled = false;
+        SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().enabled = true;
+        SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().InitializeEncounter();
     }
     void doRest()
     {

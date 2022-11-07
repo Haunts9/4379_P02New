@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     BaseCharacterObject enemy;
+    [Header("Attack>Defend>Special")]
     int AttackRange;
     int DefendRange;
     public void Initialize()
@@ -33,24 +34,36 @@ public class EnemyAI : MonoBehaviour
     }
     private void Attack()
     {
-        Debug.Log(enemy.name + " Attacks!");
+        //Debug.Log(enemy.name + " Attacks!");
+        SceneData.instanceRef.mainText.text = (enemy.characterName + " attacks " + enemy.selectedTarget.characterName + "!");
         EnemyAttack temp = gameObject.GetComponent<EnemyAttack>();
         temp.AttackTrigger();
         EndTurn();
     }
     private void Defend()
     {
-        Debug.Log(enemy.name + " Defends!");
+        SceneData.instanceRef.mainText.text = (enemy.characterName + " defends!");
         enemy.isDefending = true;
         EndTurn();
     }
     private void Special()
     {
-        Debug.Log(enemy.name + " Specials!");
+        
         if (enemy.specialAbility != null)
         {
-            Instantiate(enemy.specialAbility);
-            EndTurn();
+            if (enemy.currentCooldown == 0)
+            {
+                SceneData.instanceRef.mainText.text = (enemy.characterName + " uses " + enemy.specialAbilityName + "!");
+                enemy.currentCooldown = enemy.specialCooldown;
+                Instantiate(enemy.specialAbility);
+                EndTurn();
+            }
+            else
+            {
+                enemy.currentCooldown--;
+                Attack();
+            }
+            
         }
         else
         {

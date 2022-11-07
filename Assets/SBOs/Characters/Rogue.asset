@@ -14,13 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 1
   characterName: Diamanda
+  characterDescription: A wandering jester. She makes a living by selling her combat
+    skills to the highest bidder, because she's honestly a terrible clown.
   doll: {fileID: 238657988638483875, guid: 6aaa1091127e4364f86ae2f6b7ad992d, type: 3}
   dollSpawn: {fileID: 7627490251718639423, guid: 4990452015476cc4db34c6cb9016edbb, type: 3}
   icon: {fileID: 4267552636779454803, guid: 8f0af99d5d9eb694b97ced4b868d9b77, type: 3}
   specialAbility: {fileID: 8040864443900734518, guid: 59d24fbefa6a94244aed4fc41613c86f, type: 3}
   specialAbilityName: Dagger Storm
+  specialAbilityDescription: Diamanda unleashes a torrent of daggers that deal low
+    damage but rack up.
   specialCooldown: 4
-  currentCooldown: 4
+  currentCooldown: 0
   attackAmount: 3
   beatModifier: 0.5
   beatZoneSlow: 0.1
@@ -30,6 +34,8 @@ MonoBehaviour:
   Attack: 7
   Defense: 3
   ActionRange: 
+  Status: Default
+  statusTimer: 0
   isDefending: 0
   selectedTarget: {fileID: 0}
   TurnPosition: 0

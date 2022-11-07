@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 1
   characterName: Spayd
+  characterDescription: A man of mysteries... How does he cast magic without taking
+    his hands out of his pockets?
   doll: {fileID: 593524143504528515, guid: 4d4b4cb3a3657804fb1c80e67225ce85, type: 3}
   dollSpawn: {fileID: 1695566965704495835, guid: cef7385b522ff5549b7519db641ee6df, type: 3}
   icon: {fileID: 5332531375004863457, guid: 5c1a9203a011f204db105aafc88ea35c, type: 3}
-  specialAbility: {fileID: 5183762032145505272, guid: aed12342f7ac0d8448a3c7f00369f4db, type: 3}
-  specialAbilityName: FireBall
+  specialAbility: {fileID: 4948572582478006103, guid: 41c3b492411151b44b7373fad9718b8e, type: 3}
+  specialAbilityName: Fire Ball
+  specialAbilityDescription: Spayd conjures a powerful attack that hits foe and ally
+    alike for huge damage.
   specialCooldown: 5
   currentCooldown: 0
   attackAmount: 2
@@ -30,6 +34,8 @@ MonoBehaviour:
   Attack: 12
   Defense: 2
   ActionRange: 
+  Status: 
+  statusTimer: 0
   isDefending: 0
   selectedTarget: {fileID: 0}
   TurnPosition: 1

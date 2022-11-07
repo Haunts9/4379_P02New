@@ -12,7 +12,11 @@ public class InitializeOnSceneLoad : MonoBehaviour
         {
             character.currentCooldown = 0;
             character.CurrentHP = character.MaxHP;
-           Instantiate(character.doll, character.dollSpawn.transform.position, character.dollSpawn.transform.rotation);
+           GameObject doll = Instantiate(character.doll, character.dollSpawn.transform.position, character.dollSpawn.transform.rotation);
+            HPBar hpBar = doll.GetComponentInChildren<HPBar>();
+            AnimationController anim = doll.GetComponentInChildren<AnimationController>();
+            hpBar.SetTarget(character);
+            anim.SetTarget(character);
         }
     }
 

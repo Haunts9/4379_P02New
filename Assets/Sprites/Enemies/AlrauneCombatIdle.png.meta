@@ -1,0 +1,782 @@
+fileFormatVersion: 2
+guid: f1260c3857c37d7418c76d2b8a0899be
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 986.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc619775ae816b4da37f73e97e94573
+      internalID: -1182661216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 986.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c9163fa5eb2a446b8c98518c0f1a11
+      internalID: -860480903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 986.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeca3aa16cd454c42ae27079611be076
+      internalID: 1294424220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 986.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992d85e26de0bdf49b8b6620731413cd
+      internalID: -788166207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 986.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6368966bc78762429c1c480278d94df
+      internalID: -470661380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 789.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7420659e794ba94e85cf95229d1eba7
+      internalID: -536810068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 789.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99615b236afcb7f409bd4f399a6089cb
+      internalID: -1423529086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_7
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 789.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db7f754a471e74499749166d3ef831a
+      internalID: 1766320879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 789.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5cfeb47cdc5d6744b3acb5b4c9cf0bb
+      internalID: -288036109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_9
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 789.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fbb68537dc80a642a3818758b5f9a3c
+      internalID: 428107401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 592.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924d12b6be398134994ab3b305055d5c
+      internalID: -1387067869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 592.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ed7b6eda7eceb418fd1f892f3d8eb4
+      internalID: 168698698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 592.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13fd3291cc462743ba345651950dd5f
+      internalID: -1045694124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 592.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37400174231b644f9de923a34e2b0b3
+      internalID: 511465831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 592.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f863f6a2292e6e6478fd2ab9ca1f9df8
+      internalID: 148795646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 395.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8df5df3d52fe54d8f87d16202ccf5c
+      internalID: -466341587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_16
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 395.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7873ec295f4ff114cbb4408c941ecb14
+      internalID: -1461171413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 395.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6153e5aa8ab2f8a40b6c4c73c0544687
+      internalID: -1991178950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_18
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 395.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3217eedb09b90047897911f23981d32
+      internalID: -807236962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_19
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 395.6667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8caca5dd2023b4da3752118552ef77
+      internalID: -1661838174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 198.66667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76846371bffff6947ac7df1f5454d370
+      internalID: 1239172222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 198.66667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7632962acd70834aac67798ee4cdc2d
+      internalID: -1560325904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 198.66667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43a418c61e02ec4cad0e6ee8d884fbf
+      internalID: 2005108100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 198.66667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdfe65177b6d7314f9ce9f8fa73dc801
+      internalID: 1611704309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_24
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 198.66667
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465932cfa56eee54dbf0f50ddd796c19
+      internalID: 2114466450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.6666718
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19e51a0441253041bff32002c9e81c4
+      internalID: -1308556499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_26
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1.6666718
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd5de6925d8ea9469d5b7216f6b38f4
+      internalID: 1616005931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_27
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1.6666718
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a61624637d6e3842a17bee093455450
+      internalID: -438933231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_28
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1.6666718
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f6b2d633782ba4dbd3dfb08846145e
+      internalID: -6115278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlrauneCombatIdle_29
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1.6666718
+        width: 200
+        height: 197.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75626828b2a851e40b88fe1dbcb1df2a
+      internalID: -503901317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e64dfc7bd2340204cbd54d56c390a595
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AlrauneCombatIdle_2: 1294424220
+      AlrauneCombatIdle_15: -466341587
+      AlrauneCombatIdle_26: 1616005931
+      AlrauneCombatIdle_13: 511465831
+      AlrauneCombatIdle_16: -1461171413
+      AlrauneCombatIdle_12: -1045694124
+      AlrauneCombatIdle_24: 2114466450
+      AlrauneCombatIdle_5: -536810068
+      AlrauneCombatIdle_17: -1991178950
+      AlrauneCombatIdle_18: -807236962
+      AlrauneCombatIdle_19: -1661838174
+      AlrauneCombatIdle_21: -1560325904
+      AlrauneCombatIdle_11: 168698698
+      AlrauneCombatIdle_6: -1423529086
+      AlrauneCombatIdle_14: 148795646
+      AlrauneCombatIdle_9: 428107401
+      AlrauneCombatIdle_23: 1611704309
+      AlrauneCombatIdle_8: -288036109
+      AlrauneCombatIdle_28: -6115278
+      AlrauneCombatIdle_4: -470661380
+      AlrauneCombatIdle_1: -860480903
+      AlrauneCombatIdle_3: -788166207
+      AlrauneCombatIdle_7: 1766320879
+      AlrauneCombatIdle_27: -438933231
+      AlrauneCombatIdle_25: -1308556499
+      AlrauneCombatIdle_0: -1182661216
+      AlrauneCombatIdle_20: 1239172222
+      AlrauneCombatIdle_10: -1387067869
+      AlrauneCombatIdle_29: -503901317
+      AlrauneCombatIdle_22: 2005108100
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

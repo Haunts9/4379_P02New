@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3b07fc7c055404bbf35195c7f85323, type: 3}
+  m_Name: Alraune
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  characterName: Alraune
+  characterDescription: 
+  doll: {fileID: 1952088568374787985, guid: db0c0a1356b619b469fdd3502fc41455, type: 3}
+  dollSpawn: {fileID: 0}
+  icon: {fileID: 5221868291555309408, guid: e97e1aaa74dd7944ea9430fe52f55b64, type: 3}
+  specialAbility: {fileID: 9075534318315607518, guid: 52c3f7c3e8305974e9a17c3da69e5f17, type: 3}
+  specialAbilityName: Poison
+  specialAbilityDescription: A poisonous kiss from an alluring pile of weeds.
+  specialCooldown: 3
+  currentCooldown: 0
+  attackAmount: 3
+  beatModifier: 1
+  beatZoneSlow: 0.1
+  MaxHP: 12
+  CurrentHP: 0
+  Speed: 5
+  Attack: 5
+  Defense: 3
+  ActionRange: 4600000050000000
+  Status: 
+  statusTimer: 0
+  isDefending: 0
+  selectedTarget: {fileID: 11400000, guid: c9ed336bd13c43d459a01ea86a41514e, type: 2}
+  TurnPosition: 2

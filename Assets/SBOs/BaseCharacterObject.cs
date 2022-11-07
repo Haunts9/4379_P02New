@@ -7,12 +7,14 @@ public class BaseCharacterObject : ScriptableObject
     [Header("Important Stuff")]
     [SerializeField] public bool isPlayer = false;
     [SerializeField] public string characterName;
+    [SerializeField] public string characterDescription;
     [SerializeField] public GameObject doll;
     [SerializeField] public Transform dollSpawn;
     [SerializeField] public GameObject icon;
     [Header("Special")]
     [SerializeField] public GameObject specialAbility;
     [SerializeField] public string specialAbilityName;
+    [SerializeField] public string specialAbilityDescription;
     [SerializeField] public int specialCooldown;
     [SerializeField] public int currentCooldown;
     [Header("Stats")]
@@ -27,6 +29,8 @@ public class BaseCharacterObject : ScriptableObject
     [Header("Enemy Only Stuff")]
     [SerializeField] public int[] ActionRange;
     [Header("Script Modifiers")]
+    public string Status = default;
+    public int statusTimer = 0;
     public bool isDefending = false;
     public BaseCharacterObject selectedTarget;
     public int TurnPosition;

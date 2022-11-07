@@ -5,4 +5,8 @@ public class BaseEncounterObject : ScriptableObject
 {
     [SerializeField] public string encounterName;
     [SerializeField] public string encounterDescription;
+    [SerializeField] public string[] encounterOptions;
+    [SerializeField] public GameObject encounterProp;
+    [SerializeField] public GameObject encounterPropUsed;
+    [SerializeField] public GameObject encounterEffect;
 }

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1354116945083475295}
   - component: {fileID: 1354116945083475293}
-  - component: {fileID: 27026049988228205}
   - component: {fileID: 753987358545806885}
+  - component: {fileID: 6887006540491192128}
   m_Layer: 0
   m_Name: RogueBlip
   m_TagString: Untagged
@@ -51,21 +51,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &27026049988228205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354116945083475291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a1d080f2ae894478bb07d7b7116deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitSound: {fileID: 8300000, guid: a2ae90e42daaf4723a539c25867d37fd, type: 3}
-  missSound: {fileID: 8300000, guid: e44bb15d0be184e228244208f1a94e2c, type: 3}
-  soundVolume: 0.5
 --- !u!136 &753987358545806885
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -80,6 +65,21 @@ CapsuleCollider:
   m_Height: 1.6
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6887006540491192128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354116945083475291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2e00fc560d4ae4990e00506ad51994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitSound: {fileID: 8300000, guid: 61e73f3e692c640eb9f9c7ee724ac862, type: 3}
+  missSound: {fileID: 8300000, guid: 85e890e800369403ea5af9b10adecb94, type: 3}
+  soundVolume: 0.5
 --- !u!1 &4642497650088932651
 GameObject:
   m_ObjectHideFlags: 0

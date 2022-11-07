@@ -52,6 +52,7 @@ public class RogueStorm : MonoBehaviour
             //reset
             SceneData.instanceRef.CurrentTurnAccessor.attackAmount = tempChar.attackAmount;
             SceneData.instanceRef.CurrentTurnAccessor.beatModifier = tempChar.beatModifier;
+            SceneData.instanceRef.CurrentTurnAccessor.Attack = tempChar.Attack;
             Destroy(tempChar);
             Destroy(gameObject);
         }

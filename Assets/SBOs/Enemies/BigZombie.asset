@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BigZombie
   m_EditorClassIdentifier: 
   isPlayer: 0
-  characterName: Zombie
-  doll: {fileID: 821177826842922232, guid: ca261675a73915b469c8690ede0875a5, type: 3}
+  characterName: Big Chungus
+  doll: {fileID: 1889354979720413433, guid: e72a5fe7a1f1ee245adb1292c882f15c, type: 3}
   dollSpawn: {fileID: 0}
   icon: {fileID: 5221868291555309408, guid: e97e1aaa74dd7944ea9430fe52f55b64, type: 3}
   specialAbility: {fileID: 0}
@@ -28,7 +28,7 @@ MonoBehaviour:
   CurrentHP: 100
   Speed: 2
   Attack: 15
-  Defense: 7
+  Defense: 1
   ActionRange: 3c00000050000000
   isDefending: 0
   selectedTarget: {fileID: 11400000, guid: c9ed336bd13c43d459a01ea86a41514e, type: 2}

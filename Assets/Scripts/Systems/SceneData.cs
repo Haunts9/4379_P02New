@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class SceneData : MonoBehaviour
 {
     public static SceneData instanceRef;
+    [SerializeField] public TextMeshProUGUI mainText;
     [Header("Level Variables")]
     [SerializeField] public BaseLevelObject[] AllLevels;
     [SerializeField] public BaseLevelObject CurrentLevel;
@@ -24,6 +25,8 @@ public class SceneData : MonoBehaviour
     [Header("Combat Variables")]
     [SerializeField] private BaseCharacterObject CurrentTurn;
     public List<BaseCharacterObject> TurnOrder = new List<BaseCharacterObject>();
+    [Header("Encounter Variables")]
+    public int choice;
     #region KnownSceneObjects
     [Header("InScene Variables")]
     [SerializeField] public GameObject BlipSpawner;
@@ -31,6 +34,7 @@ public class SceneData : MonoBehaviour
     [SerializeField] public GameObject DefenseBlip;
     [SerializeField] public GameObject TravelManager;
     [SerializeField] public GameObject TurnManager;
+    [SerializeField] public GameObject EncounterManager;
     [Header("Panorama Variables")]
     [SerializeField] public GameObject CurrentPanorama;
     public Transform[] EnemyDollSpawnLocations;
@@ -92,5 +96,9 @@ public class SceneData : MonoBehaviour
     {
         BeatZoneUsable = usable;
         Debug.Log("BeatZone: " + usable);
+    }
+    public void ClearText()
+    {
+        mainText.text = "";
     }
 }

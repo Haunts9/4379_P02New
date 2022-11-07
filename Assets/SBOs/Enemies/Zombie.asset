@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   characterName: Zombie
+  characterDescription: 
   doll: {fileID: 821177826842922232, guid: ba614ed902de13644aa3c086cdd930d9, type: 3}
   dollSpawn: {fileID: 0}
   icon: {fileID: 5221868291555309408, guid: e97e1aaa74dd7944ea9430fe52f55b64, type: 3}
   specialAbility: {fileID: 0}
   specialAbilityName: 
+  specialAbilityDescription: 
   specialCooldown: 0
   currentCooldown: 0
   attackAmount: 2
@@ -28,7 +30,7 @@ MonoBehaviour:
   CurrentHP: 0
   Speed: 3
   Attack: 10
-  Defense: 5
+  Defense: 1
   ActionRange: 3c00000050000000
   isDefending: 0
   selectedTarget: {fileID: 11400000, guid: c9ed336bd13c43d459a01ea86a41514e, type: 2}

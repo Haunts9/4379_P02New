@@ -111,9 +111,11 @@ public class TurnManager : MonoBehaviour
     #region Player
     private void PlayerTurn()
     {
+        doStatusCheck();
         SceneData.instanceRef.CurrentTurnAccessor.isDefending = false;
         if (SceneData.instanceRef.CurrentTurnAccessor.CurrentHP > 0)
         {
+
             SetIcon();
             if (SceneData.instanceRef.CurrentTurnAccessor.selectedTarget == null || SceneData.instanceRef.CurrentTurnAccessor.selectedTarget.CurrentHP ==0)
             {
@@ -175,7 +177,8 @@ public class TurnManager : MonoBehaviour
     }
     public void AttackButtonPress()
     {
-        Debug.Log(TurnOrder[CurrentTurn].characterName + " Attacks " + SceneData.instanceRef.CurrentTurnAccessor.selectedTarget);
+        //Debug.Log(TurnOrder[CurrentTurn].characterName + " Attacks " + SceneData.instanceRef.CurrentTurnAccessor.selectedTarget);
+        SceneData.instanceRef.mainText.text = (TurnOrder[CurrentTurn].characterName + " attacks " + SceneData.instanceRef.CurrentTurnAccessor.selectedTarget.characterName + "!");
         PlayerField.SetActive(false);
         PlayerAttack attack = gameObject.GetComponent<PlayerAttack>();
         attack.AttackTrigger();
@@ -184,7 +187,8 @@ public class TurnManager : MonoBehaviour
     }
     public void DefendButtonPress()
     {
-        Debug.Log(TurnOrder[CurrentTurn].characterName + " Defends!");
+       // Debug.Log(TurnOrder[CurrentTurn].characterName + " Defends!");
+        SceneData.instanceRef.mainText.text = (TurnOrder[CurrentTurn].characterName + " defends!");
         PlayerField.SetActive(false);
         SceneData.instanceRef.CurrentTurnAccessor.isDefending = true;
         StartCoroutine(WaitABitBeforeTurn());
@@ -196,7 +200,8 @@ public class TurnManager : MonoBehaviour
         //implement here
         if (SceneData.instanceRef.CurrentTurnAccessor.currentCooldown == 0)
         {
-            Debug.Log(TurnOrder[CurrentTurn].characterName + " Specials!");
+           // Debug.Log(TurnOrder[CurrentTurn].characterName + " Specials!");
+            SceneData.instanceRef.mainText.text = (TurnOrder[CurrentTurn].characterName + " uses " + SceneData.instanceRef.CurrentTurnAccessor.specialAbilityName + "!");
             PlayerField.SetActive(false);
             Instantiate(SceneData.instanceRef.CurrentTurnAccessor.specialAbility);
             StartCoroutine(WaitABitBeforeTurn());
@@ -213,7 +218,8 @@ public class TurnManager : MonoBehaviour
     }
     public void SkipButtonPress()
     {
-        Debug.Log(TurnOrder[CurrentTurn].characterName + " Passes");
+        //Debug.Log(TurnOrder[CurrentTurn].characterName + " Passes");
+        SceneData.instanceRef.mainText.text = (TurnOrder[CurrentTurn].characterName + " passes!");
         PlayerField.SetActive(false);
         StartCoroutine(WaitABitBeforeTurn());
         StartCoroutine(EndTurn());
@@ -223,6 +229,7 @@ public class TurnManager : MonoBehaviour
     #region Enemy
     private void EnemyTurn()
     {
+        doStatusCheck();
         if (SceneData.instanceRef.CurrentTurnAccessor.CurrentHP > 0)
         {
             SetIcon();
@@ -261,14 +268,17 @@ public class TurnManager : MonoBehaviour
         GameObject doll = Instantiate(enemy.doll, enemy.dollSpawn.transform);
         Selector select = doll.GetComponent<Selector>();
         HPBar hpBar = doll.GetComponentInChildren<HPBar>();
+        AnimationController anim = doll.GetComponentInChildren<AnimationController>();
         select.SetTarget(enemy);
         hpBar.SetTarget(enemy);
+        anim.SetTarget(enemy);
         // spawn
         TurnOrder.Add(enemy);
     }
     #endregion
     private void DoBattleCheck()
     {
+        SceneData.instanceRef.TurnOrder = TurnOrder;
         midTurn = true;
         curEnemies = 0;
         DownedCharacters = 0;
@@ -290,6 +300,7 @@ public class TurnManager : MonoBehaviour
         if (DownedCharacters == SceneData.instanceRef.CharactersInParty.Length)
         {
             Debug.Log("combat lost");
+            SceneData.instanceRef.ClearText();
             //doLossThing
             midTurn = false;
             combat = false;
@@ -298,6 +309,7 @@ public class TurnManager : MonoBehaviour
         else if (curEnemies >= maxEnemies)
         {
             Debug.Log("combat won");
+            SceneData.instanceRef.ClearText();
             //doEndVictoryThing
             midTurn = false;
             combat = false;
@@ -310,6 +322,42 @@ public class TurnManager : MonoBehaviour
             NextTurn();
         }
     }
+    private void doStatusCheck()
+    {
+        if (SceneData.instanceRef.CurrentTurnAccessor.statusTimer != 0)
+        {
+            SceneData.instanceRef.CurrentTurnAccessor.statusTimer--;
+        }
+        switch(SceneData.instanceRef.CurrentTurnAccessor.Status)
+        {
+            case "Default":
+                break;
+            case "Poisoned":
+                doPoison(SceneData.instanceRef.CurrentTurnAccessor);
+                break;
+            default:
+                break;
+        }
+    }
+    #region statusConditions
+    void doPoison(BaseCharacterObject target)
+    {
+        if (target.statusTimer != 0)
+        {
+            Debug.Log(target + " is Poisoned!");
+            target.CurrentHP -= (target.MaxHP / 10);
+            if (target.CurrentHP < 0)
+            {
+                target.CurrentHP = 0;
+            }
+        }
+        else
+        {
+            Debug.Log(target + " is no longer Poisoned.");
+            target.Status = "Default";
+        }
+    }
+    #endregion
     #region SmallStuff
     static int SortBySpeed(BaseCharacterObject c1, BaseCharacterObject c2)
     {
