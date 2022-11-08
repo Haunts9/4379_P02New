@@ -18,7 +18,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void ChooseAction()
     {
-        int choice = Random.Range(1,100);
+        int choice = Random.Range(1,101);
         if (choice <= AttackRange)
         {
             Attack();

@@ -17,6 +17,7 @@ MonoBehaviour:
   - Battle
   - Encounter
   - Battle
+  - Rest
   - Boss
   Panoramas:
   - {fileID: 6183575621841139490, guid: 1ee0765ae7e010e4da5a06eebb50e26e, type: 3}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14002341, g: 0.11748208, b: 0.111842774, a: 1}
+  m_IndirectSpecularColor: {r: 0.13997753, g: 0.11743745, b: 0.11174343, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8867,6 +8867,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69502f5f31f2d1a4089ead5d6b286934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Defaults:
+  - {fileID: 11400000, guid: 1af27b2a0c0d6634fb78e071cc453109, type: 2}
+  - {fileID: 11400000, guid: e56cd79d94b9e6141823ea63dcedd088, type: 2}
+  - {fileID: 11400000, guid: 43d224099f934ec43bd8853233c3794e, type: 2}
+  - {fileID: 11400000, guid: 30f37f71709ac304aad2f28f5e17f2d1, type: 2}
 --- !u!1 &1712106516
 GameObject:
   m_ObjectHideFlags: 0
@@ -9823,6 +9828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91b99bfea548c046a7eeabb01cb741f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RestEncounter: {fileID: 11400000, guid: 94016c9c7a3f2c742a29eb53555ae4d9, type: 2}
   PanSpawn: {fileID: 1630400368}
   PanDelete: {fileID: 102595943}
   walkSpeed: 5

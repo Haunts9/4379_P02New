@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TravelManager : MonoBehaviour
 {
+    [SerializeField] BaseEncounterObject RestEncounter;
     [SerializeField] Transform PanSpawn;
     [SerializeField] Transform PanDelete;
     [SerializeField] float walkSpeed = 5f;
@@ -92,6 +93,10 @@ public class TravelManager : MonoBehaviour
     }
     void doRest()
     {
-
+        SceneData.instanceRef.CurrentEncounter = RestEncounter;
+        Debug.Log(SceneData.instanceRef.CurrentEncounter + " initialized.");
+        SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().enabled = false;
+        SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().enabled = true;
+        SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().InitializeEncounter();
     }
 }

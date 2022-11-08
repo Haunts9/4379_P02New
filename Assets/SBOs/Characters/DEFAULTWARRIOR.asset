@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3b07fc7c055404bbf35195c7f85323, type: 3}
+  m_Name: DEFAULTWARRIOR
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  characterName: Hart
+  characterDescription: A brave young lad with a heart of gold. While he might not
+    be the most proficient in combat, he can certainly take a beating!
+  doll: {fileID: 6028005283419217487, guid: bc930ef66c6af134f868d6376e700511, type: 3}
+  dollSpawn: {fileID: 3921309824205006866, guid: da33893b38245954ea0f09c585c7ed36, type: 3}
+  icon: {fileID: 7852384302842541476, guid: 8087198c4b198e248b019ffe53e8d46c, type: 3}
+  specialAbility: {fileID: 9075534318315607518, guid: 27382ecebdcefba419f9c80350ede57b, type: 3}
+  specialAbilityName: Taunt
+  specialAbilityDescription: All enemies are forced to target Hart for a certain
+    amount of turns.
+  specialCooldown: 4
+  currentCooldown: 0
+  attackAmount: 1
+  beatModifier: 2
+  beatZoneSlow: 0.1
+  MaxHP: 100
+  CurrentHP: 100
+  Speed: 2
+  Attack: 15
+  Defense: 5
+  ActionRange: 
+  Status: 
+  statusTimer: 0
+  isDefending: 0
+  selectedTarget: {fileID: 0}
+  TurnPosition: 5
