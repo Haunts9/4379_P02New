@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour
         Debug.Log("Attacker: " + SceneData.instanceRef.CurrentTurnAccessor);
         SceneData.instanceRef.ToggleBeatZone(true);
         count = SceneData.instanceRef.CurrentTurnAccessor.attackAmount-1;
-        FinalTime = SceneData.instanceRef.AccessBeat.beatSpeed * SceneData.instanceRef.CurrentTurnAccessor.beatModifier;
+        FinalTime = SceneData.instanceRef.AccessBeat.beatSpeed / SceneData.instanceRef.CurrentTurnAccessor.beatModifier;
         SceneData.instanceRef.SetBusy = true;
         StartCoroutine(SendBlip());
     }
@@ -23,11 +23,11 @@ public class PlayerAttack : MonoBehaviour
         //Time for blips to move
         if (count == 0)
         {
-            yield return new WaitForSeconds(FinalTime+(1f+(.5f* SceneData.instanceRef.CurrentTurnAccessor.attackAmount) * SceneData.instanceRef.CurrentTurnAccessor.beatModifier));
+            yield return new WaitForSeconds((.5f* SceneData.instanceRef.CurrentTurnAccessor.attackAmount) + SceneData.instanceRef.CurrentTurnAccessor.beatModifier);
         }
         else
         {
-            yield return new WaitForSeconds(FinalTime);
+            yield return new WaitForSeconds(FinalTime*.5f);
         }
         //stop  after all blips have come and gone
         if(count > 0)

@@ -24,12 +24,12 @@ MonoBehaviour:
   specialCooldown: 3
   currentCooldown: 0
   attackAmount: 3
-  beatModifier: 1
+  beatModifier: 2
   beatZoneSlow: 0.1
   MaxHP: 12
   CurrentHP: 0
   Speed: 5
-  Attack: 5
+  Attack: 7
   Defense: 3
   ActionRange: 4600000050000000
   Status: 

@@ -12,7 +12,7 @@ public abstract class BlipScript : MonoBehaviour
     protected abstract void Miss();
     private void Awake()
     {
-        blipSpeed = SceneData.instanceRef.blipSpeed;
+        blipSpeed = SceneData.instanceRef.blipSpeed * SceneData.instanceRef.CurrentTurnAccessor.beatModifier;
     }
     void FixedUpdate()
     {

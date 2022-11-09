@@ -14,6 +14,8 @@ public class TravelManager : MonoBehaviour
     {
         SceneData.instanceRef.CurrentEvent = 0;
         SceneData.instanceRef.walkSpeed = walkSpeed;
+        //Level = SceneData.instanceRef.CurrentLevel;
+        SceneData.instanceRef.AudioManager.GetComponent<AudioManager>().StartTrack();
     }
 
     public void InitializeNextEvent()
@@ -21,16 +23,31 @@ public class TravelManager : MonoBehaviour
         Level = SceneData.instanceRef.CurrentLevel;
         SceneData.instanceRef.CurrentEvent++;
         OldPanorama = SceneData.instanceRef.CurrentPanorama;
-        createPanorama();
+        if (SceneData.instanceRef.CurrentEvent == 1)
+        {
+            createEntrancePanorama();
+        }
+        else
+        {
+            createPanorama();
+        }
+
         StartCoroutine(walkSpeed.Tweeng((p) => OldPanorama.transform.position = p, OldPanorama.transform.position, PanDelete.position));
         StartCoroutine(walkSpeed.Tweeng((p) => SceneData.instanceRef.CurrentPanorama.transform.position = p, SceneData.instanceRef.CurrentPanorama.transform.position, new Vector3(0,0,0)));
         StartCoroutine(waitTillNextEvent());
+        StartCoroutine(Walking());
     }
     #region doBackground
     void createPanorama()
     {
         int choice = Random.Range(0, Level.Panoramas.Length);
         SceneData.instanceRef.CurrentPanorama = Instantiate(Level.Panoramas[choice], PanSpawn);
+        SceneData.instanceRef.EnemyDollSpawnLocations = SceneData.instanceRef.CurrentPanorama.FindComponentsInChildrenWithTag<Transform>("EnemySpawn");
+        SceneData.instanceRef.EncounterSpawnLocation = SceneData.instanceRef.CurrentPanorama.FindComponentInChildWithTag<Transform>("ExploreSpawn");
+    }
+    void createEntrancePanorama()
+    {
+        SceneData.instanceRef.CurrentPanorama = Instantiate(Level.EntrancePanorama, PanSpawn);
         SceneData.instanceRef.EnemyDollSpawnLocations = SceneData.instanceRef.CurrentPanorama.FindComponentsInChildrenWithTag<Transform>("EnemySpawn");
         SceneData.instanceRef.EncounterSpawnLocation = SceneData.instanceRef.CurrentPanorama.FindComponentInChildWithTag<Transform>("ExploreSpawn");
     }
@@ -46,10 +63,28 @@ public class TravelManager : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         doEvent();
     }
+    IEnumerator Walking()
+    { 
+        yield return new WaitForSeconds(.1f);
+        foreach (GameObject character in SceneData.instanceRef.PartyDolls)
+        {
+            AnimationController anim = character.GetComponentInChildren<AnimationController>();
+            anim.SetWalking();
+        }
+        yield return new WaitForSeconds(walkSpeed);
+        foreach (GameObject character in SceneData.instanceRef.PartyDolls)
+        {
+            AnimationController anim = character.GetComponentInChildren<AnimationController>();
+            anim.SetWalking();
+        }
+    }
     void doEvent()
     {
         switch(Level.floorplan[SceneData.instanceRef.CurrentEvent])
         {
+            case "Entrance":
+                doEntrance();
+                break;
             case "Battle":
                 doBattle();
                 break;
@@ -61,6 +96,9 @@ public class TravelManager : MonoBehaviour
                 break;
             case "Rest":
                 doRest();
+                break;
+            case "End":
+                doLevelEnd();
                 break;
 
         }
@@ -98,5 +136,28 @@ public class TravelManager : MonoBehaviour
         SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().enabled = false;
         SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().enabled = true;
         SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().InitializeEncounter();
+    }
+    void doEntrance()
+    {
+        SceneData.instanceRef.CurrentEncounter = Level.Entrance;
+        Debug.Log(SceneData.instanceRef.CurrentEncounter + " initialized.");
+        SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().enabled = false;
+        SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().enabled = true;
+        SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().InitializeEncounter();
+    }
+    void doLevelEnd()
+    {
+        SceneData.instanceRef.levelCount++;
+        if (SceneData.instanceRef.levelCount < SceneData.instanceRef.AllLevels.Length)
+        {
+            SceneData.instanceRef.CurrentEvent = 0;
+            SceneData.instanceRef.CurrentLevel = SceneData.instanceRef.AllLevels[SceneData.instanceRef.levelCount];
+            SceneData.instanceRef.AudioManager.GetComponent<AudioManager>().StartTrack();
+        }
+        else
+        {
+            SceneData.instanceRef.isWin = true;
+        }
+
     }
 }

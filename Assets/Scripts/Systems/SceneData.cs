@@ -9,6 +9,7 @@ public class SceneData : MonoBehaviour
     [Header("Level Variables")]
     [SerializeField] public BaseLevelObject[] AllLevels;
     [SerializeField] public BaseLevelObject CurrentLevel;
+    public int levelCount = 0;
     public BaseBattleObject CurrentBattle;
     public BaseEncounterObject CurrentEncounter;
     public int CurrentEvent = -1;
@@ -35,6 +36,7 @@ public class SceneData : MonoBehaviour
     [SerializeField] public GameObject TravelManager;
     [SerializeField] public GameObject TurnManager;
     [SerializeField] public GameObject EncounterManager;
+    [SerializeField] public GameObject AudioManager;
     [Header("Panorama Variables")]
     [SerializeField] public GameObject CurrentPanorama;
     public Transform[] EnemyDollSpawnLocations;
@@ -43,7 +45,10 @@ public class SceneData : MonoBehaviour
     #region PlayerData
     [Header("Player Data")]
     [SerializeField] public BaseCharacterObject[] CharactersInParty;
+    public List<GameObject> PartyDolls = new List<GameObject>();
     public bool isTaunting = false;
+    public bool isDead = false;
+    public bool isWin = false;
     #endregion
     public bool SetBusy
     {

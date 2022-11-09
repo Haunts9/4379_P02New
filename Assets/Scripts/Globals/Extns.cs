@@ -20,8 +20,7 @@ public static class Extns
         var(zz);
     }
 
-    public static IEnumerator Tweeng(this float duration,
-               System.Action<Vector3> var, Vector3 aa, Vector3 zz)
+    public static IEnumerator Tweeng(this float duration, System.Action<Vector3> var, Vector3 aa, Vector3 zz)
     {
         float sT = Time.time;
         float eT = sT + duration;
@@ -35,6 +34,22 @@ public static class Extns
 
         var(zz);
     }
+
+    public static IEnumerator TweengC(this float duration, System.Action<Color32> var, Color32 aa, Color32 zz)
+    {
+        float sT = Time.time;
+        float eT = sT + duration;
+
+        while (Time.time < eT)
+        {
+            float t = (Time.time - sT) / duration;
+            var(Color32.Lerp(aa, zz, Mathf.SmoothStep(0f, 1f, t)));
+            yield return null;
+        }
+
+        var(zz);
+    }
+
     public static T[] FindComponentsInChildrenWithTag<T>(this GameObject parent, string tag, bool forceActive = false) where T : Component
     {
         if (parent == null) { throw new System.ArgumentNullException(); }

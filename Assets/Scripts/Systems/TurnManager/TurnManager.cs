@@ -39,6 +39,7 @@ public class TurnManager : MonoBehaviour
     public void InitializeTurnOrder()
     {
         Battle = SceneData.instanceRef.CurrentBattle;
+      
         //Init List
         enemyDollSpawn = 0;
         curEnemies = 0;
@@ -304,6 +305,7 @@ public class TurnManager : MonoBehaviour
             //doLossThing
             midTurn = false;
             combat = false;
+            SceneData.instanceRef.isDead = true;
             CleanUp();
         }
         else if (curEnemies >= maxEnemies)
@@ -383,6 +385,7 @@ public class TurnManager : MonoBehaviour
     {
         PlayerField.SetActive(false);
         yield return new WaitForSeconds(SceneData.instanceRef.walkSpeed);
+        SceneData.instanceRef.mainText.text = Battle.Description;
         FirstTurn();
     }
     IEnumerator EndTurn()

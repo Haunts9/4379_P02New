@@ -7,11 +7,11 @@ public class MainMenuScript : MonoBehaviour
 {
     public void RestartButton()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void ReturnToMenuButton()
     {
-        //SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
     public void QuitButton()
     {

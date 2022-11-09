@@ -6,6 +6,7 @@ public class AnimationController : MonoBehaviour
 {
     BaseCharacterObject target;
     Animator animator;
+    bool walking = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,20 @@ public class AnimationController : MonoBehaviour
     public void SetTarget(BaseCharacterObject character)
     {
         target = character;
+    }
+
+    public void SetWalking()
+    {
+        if (walking == false)
+        {
+            walking = true;
+            animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            walking = false;
+            animator.SetBool("IsWalking", false);
+        }
     }
 
 }

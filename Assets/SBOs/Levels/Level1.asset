@@ -13,14 +13,19 @@ MonoBehaviour:
   m_Name: Level1
   m_EditorClassIdentifier: 
   floorName: TestFloor
+  levelMusic: {fileID: 8300000, guid: 30b27c46f9286634eac010c660dd276a, type: 3}
   floorplan:
+  - Entrance
   - Battle
   - Encounter
   - Battle
   - Rest
   - Boss
+  - End
+  EntrancePanorama: {fileID: 5593473679470803779, guid: 4be5907090e97a744b71b54894606c7e, type: 3}
   Panoramas:
-  - {fileID: 6183575621841139490, guid: 1ee0765ae7e010e4da5a06eebb50e26e, type: 3}
+  - {fileID: 5593473679470803779, guid: 4be5907090e97a744b71b54894606c7e, type: 3}
+  Entrance: {fileID: 11400000, guid: ca6abccbd3bcb9e4d9cfa3ded3309b76, type: 2}
   possibleBattles:
   - {fileID: 11400000, guid: 4b779b17b5365b241afe1d3dea59736f, type: 2}
   - {fileID: 11400000, guid: adf083f3e50ca0f448b20fb020c65388, type: 2}

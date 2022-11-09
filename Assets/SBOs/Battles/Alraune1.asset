@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ed7261ada515a40a5c4274f8ed11f7, type: 3}
   m_Name: Alraune1
   m_EditorClassIdentifier: 
+  Description: A group of evil no good plants has arrived! Show these monstrosities
+    what happens when they infringe upon the human form.
   Enemies:
   - {fileID: 11400000, guid: 8cedacd0ad5253442b017f34d7992f5a, type: 2}
   - {fileID: 11400000, guid: 8cedacd0ad5253442b017f34d7992f5a, type: 2}

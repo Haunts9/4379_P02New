@@ -8,7 +8,7 @@ public class PoisonBlipScript : BlipScript
     BaseCharacterObject target;
     private void Start()
     {
-
+        Target();
     }
     private void Target()
     {
@@ -16,7 +16,7 @@ public class PoisonBlipScript : BlipScript
     }
     protected override void Miss()
     {
-        Target();
+        //Target();
         Debug.Log("Do Player Miss");
         target.statusTimer = 4;
         target.Status = "Poisoned";
@@ -29,7 +29,7 @@ public class PoisonBlipScript : BlipScript
     }
     protected override void Hit()
     {
-        Target();
+        //Target();
         //defense to reduce damage
         Debug.Log("Do Player Hit");
     }

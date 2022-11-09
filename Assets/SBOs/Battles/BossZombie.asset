@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ed7261ada515a40a5c4274f8ed11f7, type: 3}
   m_Name: BossZombie
   m_EditorClassIdentifier: 
+  Description: A large shambling horror and his lackeys blocks your path onwards...
+    You must slay this foe to enter the castle...
   Enemies:
   - {fileID: 11400000, guid: ca1f30b501e0c344fa25f13dd60ca978, type: 2}
   - {fileID: 11400000, guid: eb176b81d3c996549827f442c75d0067, type: 2}
