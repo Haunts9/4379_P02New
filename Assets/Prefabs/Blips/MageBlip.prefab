@@ -615,7 +615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSound: {fileID: 8300000, guid: 61e73f3e692c640eb9f9c7ee724ac862, type: 3}
   missSound: {fileID: 8300000, guid: 85e890e800369403ea5af9b10adecb94, type: 3}
-  soundVolume: 0.5
+  soundVolume: 0.25
 --- !u!1 &5498928481241513763
 GameObject:
   m_ObjectHideFlags: 0

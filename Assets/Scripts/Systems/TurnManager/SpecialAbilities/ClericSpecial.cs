@@ -32,7 +32,7 @@ public class ClericSpecial : MonoBehaviour
         //Time for blips to move
         if (count == 0)
         {
-            yield return new WaitForSeconds( (.5f * SceneData.instanceRef.CurrentTurnAccessor.attackAmount) * SceneData.instanceRef.CurrentTurnAccessor.beatModifier);
+            yield return new WaitForSeconds((SceneData.instanceRef.CurrentTurnAccessor.attackAmount / SceneData.instanceRef.CurrentTurnAccessor.beatModifier) + 1f);
         }
         else
         {

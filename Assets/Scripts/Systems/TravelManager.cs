@@ -60,7 +60,7 @@ public class TravelManager : MonoBehaviour
     #endregion
     IEnumerator waitTillNextEvent()
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(1f);
         doEvent();
     }
     IEnumerator Walking()
@@ -71,7 +71,7 @@ public class TravelManager : MonoBehaviour
             AnimationController anim = character.GetComponentInChildren<AnimationController>();
             anim.SetWalking();
         }
-        yield return new WaitForSeconds(walkSpeed);
+        yield return new WaitForSeconds(walkSpeed-.5f);
         foreach (GameObject character in SceneData.instanceRef.PartyDolls)
         {
             AnimationController anim = character.GetComponentInChildren<AnimationController>();

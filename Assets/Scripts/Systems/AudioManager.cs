@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
     }
     public void StartTrack()
     {
-        StartCoroutine(AudioHelper.StartFade(main, 1f, 0f));
+        StartCoroutine(AudioHelper.StartFade(main, 2f, 0f));
         currentTrack = SceneData.instanceRef.CurrentLevel.levelMusic;
         Debug.Log("Now Playing: " + SceneData.instanceRef.CurrentLevel.levelMusic + " " + main.isPlaying);
         main.clip = currentTrack;
@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
     }
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(1f);
-        StartCoroutine(AudioHelper.StartFade(main, 1f, targetVolume));
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(AudioHelper.StartFade(main, 2f, targetVolume));
     }
 }

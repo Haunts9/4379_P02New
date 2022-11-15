@@ -14,7 +14,7 @@ public class AlraunePoison : MonoBehaviour
         //Increase number of daggers
         tempChar = Instantiate(SceneData.instanceRef.CurrentTurnAccessor);
         SceneData.instanceRef.CurrentTurnAccessor.attackAmount = 1;
-        SceneData.instanceRef.CurrentTurnAccessor.beatModifier = .1f;
+        SceneData.instanceRef.CurrentTurnAccessor.beatModifier = 1f;
         //Activate the thing
         SpecialTrigger();
     }
@@ -33,7 +33,7 @@ public class AlraunePoison : MonoBehaviour
         //Time for blips to move
         if (count == 0)
         {
-            yield return new WaitForSeconds( (.5f * SceneData.instanceRef.CurrentTurnAccessor.attackAmount) + SceneData.instanceRef.CurrentTurnAccessor.beatModifier);
+            yield return new WaitForSeconds((SceneData.instanceRef.CurrentTurnAccessor.attackAmount / SceneData.instanceRef.CurrentTurnAccessor.beatModifier)+1f);
         }
         else
         {

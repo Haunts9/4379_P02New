@@ -129,4 +129,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSound: {fileID: 8300000, guid: a2ae90e42daaf4723a539c25867d37fd, type: 3}
   missSound: {fileID: 8300000, guid: e44bb15d0be184e228244208f1a94e2c, type: 3}
-  soundVolume: 0.5
+  soundVolume: 0.25

@@ -127,7 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a163a5c8ad1fc4984ed0da52d8776a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blipSpeed: 0
   hitSound: {fileID: 8300000, guid: a2ae90e42daaf4723a539c25867d37fd, type: 3}
   missSound: {fileID: 8300000, guid: 85e890e800369403ea5af9b10adecb94, type: 3}
-  soundVolume: 0.5
+  soundVolume: 0.25
