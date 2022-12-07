@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef450cb83dd227499b481decf5e7d15, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: 
-  floorName: TestFloor
+  floorName: Forest
   levelMusic: {fileID: 8300000, guid: 30b27c46f9286634eac010c660dd276a, type: 3}
   floorplan:
   - Entrance
@@ -31,7 +31,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: adf083f3e50ca0f448b20fb020c65388, type: 2}
   - {fileID: 11400000, guid: 5253c312b7a917d43a1620abd00f317d, type: 2}
   - {fileID: 11400000, guid: 22e912c1b690ec3468fbf3b34f5f4947, type: 2}
+  - {fileID: 11400000, guid: 46715d2ac5608d541bedb0e2259de208, type: 2}
+  - {fileID: 11400000, guid: c940460102bd9d24686811be518284a7, type: 2}
+  - {fileID: 11400000, guid: 71015e6540cd89b4791fda7097a11372, type: 2}
   possibleBossBattles:
   - {fileID: 11400000, guid: b2ac38e7d0f43384d90baaf473873f13, type: 2}
   possibleEncounters:
   - {fileID: 11400000, guid: d909ac01563ba444891b0318def0e0fd, type: 2}
+  - {fileID: 11400000, guid: d41d6280f0428854eaa66b3ea7c722d4, type: 2}
+  - {fileID: 11400000, guid: 31aac01f58258b443b14a13d84a88f04, type: 2}
+  - {fileID: 11400000, guid: 340d3fcc0744b7d40870e43e7a98d17d, type: 2}
+  - {fileID: 11400000, guid: 89942731d42275140ac50c782baa416d, type: 2}
+  - {fileID: 11400000, guid: 77f3ea350ae6b034b908b3786cbfaebe, type: 2}

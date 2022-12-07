@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805baaedfa1263a4aa83a613926341b3, type: 3}
+  m_Name: Chest 1
+  m_EditorClassIdentifier: 
+  encounterName: Chest
+  encounterDescription: You find a treasure chest!
+  encounterOptions:
+  - Open
+  encounterProp: {fileID: 811237138419592286, guid: 598ece25f1f8e484a8f8f71f62380e7e, type: 3}
+  encounterPropUsed: {fileID: 8621878567727361976, guid: 0fa6b902c57796a45804bfddad024087, type: 3}
+  encounterEffect: {fileID: 7497994099873504556, guid: 3bdfe59bb24782048a16d3e427839de4, type: 3}

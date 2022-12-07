@@ -31,7 +31,7 @@ MonoBehaviour:
   MaxHP: 50
   CurrentHP: 50
   Speed: 5
-  Attack: 7
+  Attack: 10
   Defense: 3
   ActionRange: 
   Status: Default

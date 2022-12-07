@@ -6,6 +6,7 @@ public class EncounterManager : MonoBehaviour
 { 
     [SerializeField] GameObject window;
     [SerializeField] GameObject[] buttons;
+    [SerializeField] GameObject exitbutton;
     GameObject tempEncounterProp;
     GameObject EncounterEffect;
     BaseEncounterObject encounter;
@@ -52,12 +53,24 @@ public class EncounterManager : MonoBehaviour
         window.SetActive(false);
         SceneData.instanceRef.TravelManager.GetComponent<TravelManager>().InitializeNextEvent();
     }
+
     public void hideOptions()
     {
         foreach (GameObject button in buttons)
         {
             button.SetActive(false);
         }
+    }
+    public void PsuedoCleanUp()
+    {
+        foreach (GameObject button in buttons)
+        {
+            button.SetActive(false);
+        }
+        Destroy(EncounterEffect);
+        SceneData.instanceRef.ClearText();
+        window.SetActive(false);
+        //SceneData.instanceRef.TravelManager.GetComponent<TravelManager>().InitializeNextEvent();
     }
     public void swapProp()
     {

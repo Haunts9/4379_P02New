@@ -16,6 +16,6 @@ MonoBehaviour:
   encounterDescription: A forest of dark malevolence and probably hundreds of low
     level mobs... Continuing onwards will be a slog to say the least...
   encounterOptions: []
-  encounterProp: {fileID: 0}
+  encounterProp: {fileID: 8939845379956050172, guid: 23a32200da8b55442af1515ada302d76, type: 3}
   encounterPropUsed: {fileID: 0}
   encounterEffect: {fileID: 0}

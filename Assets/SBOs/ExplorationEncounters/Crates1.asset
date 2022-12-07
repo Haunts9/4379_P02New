@@ -17,6 +17,6 @@ MonoBehaviour:
     about them...
   encounterOptions:
   - Break
-  encounterProp: {fileID: 2040804064181013678, guid: 43beb658487600f43804c2e31f646e74, type: 3}
-  encounterPropUsed: {fileID: 8149305653686013860, guid: a6f03d604a6234d40926baca03af60e8, type: 3}
+  encounterProp: {fileID: 8621878567727361976, guid: eb0d632673e928a4489820cc267ebb2e, type: 3}
+  encounterPropUsed: {fileID: 8621878567727361976, guid: 0fa6b902c57796a45804bfddad024087, type: 3}
   encounterEffect: {fileID: 7497994099873504556, guid: 12e21e383b9cb4546821da6eb8bcc6ef, type: 3}

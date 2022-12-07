@@ -17,6 +17,6 @@ MonoBehaviour:
   encounterOptions:
   - Heal
   - Improve
-  encounterProp: {fileID: 0}
+  encounterProp: {fileID: 8303473155467975716, guid: a0020d4027893294992229a58e13a070, type: 3}
   encounterPropUsed: {fileID: 0}
   encounterEffect: {fileID: 7497994099873504556, guid: 2100e1ea8dc11d04bbffbd8904e2e86f, type: 3}

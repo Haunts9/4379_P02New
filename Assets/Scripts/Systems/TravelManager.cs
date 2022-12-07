@@ -8,6 +8,7 @@ public class TravelManager : MonoBehaviour
     [SerializeField] Transform PanSpawn;
     [SerializeField] Transform PanDelete;
     [SerializeField] float walkSpeed = 5f;
+    [SerializeField] BaseEncounterObject mimicEncounter;
     GameObject OldPanorama;
     BaseLevelObject Level;
     public void Start()
@@ -100,6 +101,9 @@ public class TravelManager : MonoBehaviour
             case "End":
                 doLevelEnd();
                 break;
+            case "MimicEvent":
+                doMimicEncounter();
+                break;
 
         }
     }
@@ -129,6 +133,14 @@ public class TravelManager : MonoBehaviour
         SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().enabled = true;
         SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().InitializeEncounter();
     }
+    void doMimicEncounter()
+    {
+        SceneData.instanceRef.CurrentEncounter = mimicEncounter;
+        Debug.Log(SceneData.instanceRef.CurrentEncounter + " initialized.");
+        SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().enabled = false;
+        SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().enabled = true;
+        SceneData.instanceRef.EncounterManager.GetComponent<EncounterManager>().InitializeEncounter();
+    }
     void doRest()
     {
         SceneData.instanceRef.CurrentEncounter = RestEncounter;
@@ -153,11 +165,18 @@ public class TravelManager : MonoBehaviour
             SceneData.instanceRef.CurrentEvent = 0;
             SceneData.instanceRef.CurrentLevel = SceneData.instanceRef.AllLevels[SceneData.instanceRef.levelCount];
             SceneData.instanceRef.AudioManager.GetComponent<AudioManager>().StartTrack();
+            StartCoroutine(waitTillLevelSwitch());
         }
         else
         {
             SceneData.instanceRef.isWin = true;
         }
 
+    }
+
+    IEnumerator waitTillLevelSwitch()
+    {
+        yield return new WaitForSeconds(3f);
+        InitializeNextEvent();
     }
 }

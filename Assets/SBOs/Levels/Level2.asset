@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef450cb83dd227499b481decf5e7d15, type: 3}
+  m_Name: Level2
+  m_EditorClassIdentifier: 
+  floorName: Castle
+  levelMusic: {fileID: 8300000, guid: 30b27c46f9286634eac010c660dd276a, type: 3}
+  floorplan:
+  - Entrance
+  - Rest
+  - Entrance
+  - Battle
+  - Encounter
+  - Battle
+  - MimicEvent
+  - Rest
+  - Encounter
+  - Battle
+  - Boss
+  - End
+  EntrancePanorama: {fileID: 1237609157641193263, guid: c68625d718af3aa4b957bec657549c0b, type: 3}
+  Panoramas:
+  - {fileID: 1237609157641193263, guid: c68625d718af3aa4b957bec657549c0b, type: 3}
+  Entrance: {fileID: 11400000, guid: bc6d0e5f15f4a7d42a1a70075f3cf188, type: 2}
+  possibleBattles:
+  - {fileID: 11400000, guid: b049e08c5599cc8449c5cd8f14937223, type: 2}
+  - {fileID: 11400000, guid: 5a7abb5a50993e64c9e4db95c173dc5f, type: 2}
+  - {fileID: 11400000, guid: fe78bf0c242ff9744a400aeea1e8270b, type: 2}
+  - {fileID: 11400000, guid: 71015e6540cd89b4791fda7097a11372, type: 2}
+  - {fileID: 11400000, guid: 6f479ff3253288a4094ab615e5c5d874, type: 2}
+  possibleBossBattles:
+  - {fileID: 11400000, guid: 504d7b26c8b1edf49870ab88121d3e6f, type: 2}
+  possibleEncounters:
+  - {fileID: 11400000, guid: 89942731d42275140ac50c782baa416d, type: 2}
+  - {fileID: 11400000, guid: 77f3ea350ae6b034b908b3786cbfaebe, type: 2}
+  - {fileID: 11400000, guid: d909ac01563ba444891b0318def0e0fd, type: 2}
+  - {fileID: 11400000, guid: d41d6280f0428854eaa66b3ea7c722d4, type: 2}
+  - {fileID: 11400000, guid: 31aac01f58258b443b14a13d84a88f04, type: 2}
+  - {fileID: 11400000, guid: 340d3fcc0744b7d40870e43e7a98d17d, type: 2}
